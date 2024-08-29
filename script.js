@@ -2,37 +2,36 @@ const perguntas = [
     {
     enunciado: "Você está com vontade de comer algo, você tem a opção de ir comer em um restaurante e interagir com as pessoas, ou pedir comida em casa e desfrutar de um jantar em sua própria companhia, o que você faria?",
     alternativas: [
-    "Pediria comida em casa",
-    "Sairia jantar em um restaurante"
+    { texto: ""Pediria comida em casa", pontuacao: 1 },
+    { texto: "Sairia jantar em um restaurante", pontuacao: 2 }
     ]
     },
     {
     enunciado: "Você tem a opção de viajar por um final de semana inteiro, ou ficar na casa de seus pais, o que você faria?",
     alternativas: [
-    "Vou viajar",
-    "Fica na casa de meus pais"
+    { texto: "Vou viajar", pontuacao: 1 },
+    { texto: "Fico na casa de meus pais!", pontuacao: 2 }
     ]
     },
     {
-    enunciado: "Quando alguém conversa com você. você tende a ser uma pessoa espontânea ou tímida?",
+    enunciado: "Quando alguém conversa com você, você tende a ser uma pessoa espontânea ou tímida?",
     alternativas: [
-    "Pessoa espontânea",
-    "Pessoa tímida"
+    { texto: "Pessoa espontânea", pontuacao: 1 },
+    { texto: "Pessoa tímida", pontuacao: 2 }
     ]
     },
     {
     enunciado: "Se alguém te pede para fazer algo e vocẽ não gostaria de fazer, você tem facilidade em negar ou você aceita para não magoar quem pediu?",
     alternativas: [
-    "Nego educadamente",
-    "Nunca nego"
+    { texto: "Nego educadamente", pontuacao: 1 },
+    { texto: "Nunca nego", pontuacao: 2 }
     ]
-    
     },
     {
     enunciado: "Você é alguém independente que consegue fazer qualquer coisa sem timidez, ou é dependende da presença de alguém para executar alggumas tarefas?",
     alternativas: [
-    "Sou uma pessoa Independente",
-    "Dependente da presença de alguém"
+    { texto: "Sou uma pessoa Independente", pontuacao: 1 },
+    { texto: "Dependente da presença de alguém", pontuacao: 2 }
     ]
     }
     ];
@@ -60,3 +59,16 @@ const perguntas = [
     });
     }
     mostraPergunta();
+    button.addEventListener('click', () => {
+    pontuacao += alternativa.pontuacao; // Adiciona a pontuação da alternativa
+    selecionada
+    atual++;
+    if (atual < perguntas.length) {
+    mostraPergunta();
+    } else {
+   function exibePontuacaoFinal() {
+    caixaPerguntas.textContent = `Você completou o questionário! Sua pontuação
+    final é: ${pontuacao}`;
+    alternativasContainer.innerHTML = ''; // Limpa as alternativas
+}
+    });
