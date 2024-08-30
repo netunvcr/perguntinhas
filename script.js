@@ -68,6 +68,3 @@ function exibePontuacaoFinal() {
 }
 
 mostraPergunta(); // Inicia o questionário mostrando a primeira pergunta
-
-}
-    });
